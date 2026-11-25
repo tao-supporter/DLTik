@@ -1,0 +1,50 @@
+name: DLTik
+options:
+  bundleIdPrefix: com.taosupporter
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "5.9"
+    TARGETED_DEVICE_FAMILY: "1,2"
+
+targets:
+  DLTik:
+    type: application
+    platform: iOS
+    sources:
+      - path: DLTik
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.taosupporter.dltik
+        PRODUCT_NAME: DLTik
+        INFOPLIST_FILE: DLTik/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGN_IDENTITY: ""
+    info:
+      path: DLTik/Info.plist
+      properties:
+        CFBundleDisplayName: DLTik
+        CFBundleShortVersionString: "$(MARKETING_VERSION)"
+        CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
+        CFBundleName: DLTik
+        NSPhotoLibraryAddUsageDescription: ダウンロードした動画や画像を写真アプリに保存するために使います
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        "UISupportedInterfaceOrientations~ipad":
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        ITSAppUsesNonExemptEncryption: false
